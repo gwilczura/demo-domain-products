@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: loc-products-apis
+  description: A collection of all products apis
+spec:
+  targets:
+    - ./apis/api-products.yaml
