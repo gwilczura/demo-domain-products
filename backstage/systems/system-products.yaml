@@ -4,6 +4,13 @@ kind: System
 metadata:
   name: system-products
   description: Products system
+  links:
+    - url: https://www.linkedin.com/in/gwilczura/
+      title: Grzegorz Linkedin Profile
+      icon: user
+    - url: https://github.com/gwilczura
+      title: Grzegorz Github account
+      icon: github
 spec:
   owner: tunas
   domain: domain-products
