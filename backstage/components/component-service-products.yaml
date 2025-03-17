@@ -8,7 +8,7 @@ spec:
   lifecycle: production
   owner: tunas
   system: system-products
-  provides-api:
+  providesApis:
     - api-products
   dependsOn:
     - resource:resource-db-products
