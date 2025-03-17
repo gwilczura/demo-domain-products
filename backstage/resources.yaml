@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: loc-products-resources
+  description: A collection of all resources used by products system and domain
+spec:
+  targets:
+    - ./resources/resource-appservice-products.yaml
+    - ./resources/resource-db-products.yaml
+    - ./resources/resource-topic-products.yaml

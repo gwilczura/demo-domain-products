@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: resource-topic-products
+  description: servicebus topic used by products service and domain to publish product related events
+spec:
+  type: topic
+  owner: tunas
+  system: system-products

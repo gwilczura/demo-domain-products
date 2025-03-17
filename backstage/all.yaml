@@ -7,6 +7,6 @@ spec:
   targets:
     - ./apis.yaml
     - ./systems.yaml
-    # - ./components.yaml
-    # - ./domains.yaml
-    # - ./resources.yaml
+    - ./components.yaml
+    - ./domains.yaml
+    - ./resources.yaml

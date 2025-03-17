@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+# https://backstage.io/docs/features/software-catalog/descriptor-format/#kind-domain
+kind: Domain
+metadata:
+  name: domain-products
+  description: Products Domain
+spec:
+  owner: tunas

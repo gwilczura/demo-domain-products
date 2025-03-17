@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: component-service-products
+  description: Products Service
+spec:
+  type: service
+  lifecycle: production
+  owner: tunas
+  system: system-products
+  provides-api:
+    - api-products
+  dependsOn:
+    - resource:resource-db-products
+    - resource:resource-appservice-products
+    - resource:resource-topic-products
+    - component:component-library-common-host

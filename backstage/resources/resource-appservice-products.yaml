@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: resource-appservice-products
+  description: AppService hosting Products Service
+spec:
+  type: appservice
+  owner: tunas
+  system: system-products
