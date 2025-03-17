@@ -6,4 +6,4 @@ metadata:
   description: Products system
 spec:
   owner: tunas
-  domain: products
+  domain: domain-products
