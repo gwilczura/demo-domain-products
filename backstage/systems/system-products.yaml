@@ -1,3 +1,4 @@
+# GW-PRES-BCKS-007-B example of system with links defined and a domain assigned
 apiVersion: backstage.io/v1alpha1
 # https://backstage.io/docs/features/software-catalog/descriptor-format/#kind-system
 kind: System

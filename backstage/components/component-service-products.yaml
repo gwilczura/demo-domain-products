@@ -1,3 +1,4 @@
+# GW-PRES-BCKS-007-B service component owned by 'tunas', providing api and dependent on resources and library
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
