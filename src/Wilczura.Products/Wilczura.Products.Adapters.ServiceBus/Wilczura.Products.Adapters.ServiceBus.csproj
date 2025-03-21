@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Wilczura.Common.ServiceBus" Version="1.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wilczura.Products.Contract\Wilczura.Products.Contract.csproj" />
+    <ProjectReference Include="..\Wilczura.Products.Ports\Wilczura.Products.Ports.csproj" />
+  </ItemGroup>
+
 </Project>

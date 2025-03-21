@@ -4,6 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <Description>Products domain contract</Description>
+    <Copyright>Grzegorz Wilczura</Copyright>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Initial version of the package</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>

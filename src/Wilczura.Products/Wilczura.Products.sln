@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Ports", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Host", "Wilczura.Products.Host\Wilczura.Products.Host.csproj", "{1102E26B-EEA4-48D7-9E11-07087E14FC84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Host.Tests.Integration", "Wilczura.Products.Host.Tests.Integration\Wilczura.Products.Host.Tests.Integration.csproj", "{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{1102E26B-EEA4-48D7-9E11-07087E14FC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1102E26B-EEA4-48D7-9E11-07087E14FC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1102E26B-EEA4-48D7-9E11-07087E14FC84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

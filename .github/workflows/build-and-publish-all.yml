@@ -1,0 +1,23 @@
+name: Wilczura.Products - build, test and release all packages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    name: Hello
+    steps:
+      - name: Hello
+        run: echo Hello
+
+  contract-publish:
+    uses: gwilczura/dotnet-common/.github/workflows/build-and-publish.yml
+    with:
+      project-path: 'src/Wilczura.Products/Wilczura.Products.Contract/Wilczura.Products.Contract.csproj'
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}

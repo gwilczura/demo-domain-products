@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Wilczura.Products.Ports\Wilczura.Products.Ports.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -8,6 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Wilczura.Common" Version="1.0.5" />
+    <PackageReference Include="Wilczura.Common.Host" Version="1.0.4" />
+    <PackageReference Include="Wilczura.Common.ServiceBus" Version="1.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wilczura.Products.Adapters.AspNet\Wilczura.Products.Adapters.AspNet.csproj" />
+    <ProjectReference Include="..\Wilczura.Products.Adapters.Postgres\Wilczura.Products.Adapters.Postgres.csproj" />
+    <ProjectReference Include="..\Wilczura.Products.Adapters.ServiceBus\Wilczura.Products.Adapters.ServiceBus.csproj" />
+    <ProjectReference Include="..\Wilczura.Products.Application\Wilczura.Products.Application.csproj" />
   </ItemGroup>
 
 </Project>
