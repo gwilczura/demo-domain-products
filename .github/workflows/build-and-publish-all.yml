@@ -16,7 +16,7 @@ jobs:
         run: echo Hello
 
   contract-publish:
-    uses: gwilczura/dotnet-common/.github/workflows/build-and-publish.yml
+    uses: gwilczura/dotnet-common/.github/workflows/build-and-publish.yml@main
     with:
       project-path: 'src/Wilczura.Products/Wilczura.Products.Contract/Wilczura.Products.Contract.csproj'
     secrets:
