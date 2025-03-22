@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Host", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Host.Tests.Integration", "Wilczura.Products.Host.Tests.Integration\Wilczura.Products.Host.Tests.Integration.csproj", "{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Application.Tests.Unit", "Wilczura.Products.Application.Tests.Unit\Wilczura.Products.Application.Tests.Unit.csproj", "{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E341352-E208-4DB4-AA0F-1D71BE4A0FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
