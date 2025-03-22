@@ -14,8 +14,27 @@ jobs:
     steps:
       - name: Hello
         run: echo Hello
+      
+  application-test:
+    needs: hello
+    uses: gwilczura/dotnet-common/.github/workflows/build-and-test.yml@main
+    with:
+      project-path: 'src/Wilczura.Products/Wilczura.Products.Application.Tests.Unit/Wilczura.Products.Application.Tests.Unit.csproj'
+      unique-name: application-test
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+      
+  integration-test:
+    needs: application-test
+    uses: gwilczura/dotnet-common/.github/workflows/build-and-test.yml@main
+    with:
+      project-path: 'src/Wilczura.Products/Wilczura.Products.Host.Tests.Integration/Wilczura.Products.Host.Tests.Integration.csproj'
+      unique-name: application-test
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
 
   contract-publish:
+    needs: integration-test
     uses: gwilczura/dotnet-common/.github/workflows/build-and-publish.yml@main
     with:
       project-path: 'src/Wilczura.Products/Wilczura.Products.Contract/Wilczura.Products.Contract.csproj'
@@ -23,6 +42,7 @@ jobs:
       token: ${{ secrets.GITHUB_TOKEN }}
 
   client-publish:
+    needs: integration-test
     uses: gwilczura/dotnet-common/.github/workflows/build-and-publish.yml@main
     with:
       project-path: 'src/Wilczura.Products/Wilczura.Products.Client/Wilczura.Products.Client.csproj'
