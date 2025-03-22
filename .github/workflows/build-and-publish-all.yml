@@ -21,3 +21,10 @@ jobs:
       project-path: 'src/Wilczura.Products/Wilczura.Products.Contract/Wilczura.Products.Contract.csproj'
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
+
+  client-publish:
+    uses: gwilczura/dotnet-common/.github/workflows/build-and-publish.yml@main
+    with:
+      project-path: 'src/Wilczura.Products/Wilczura.Products.Client/Wilczura.Products.Client.csproj'
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
