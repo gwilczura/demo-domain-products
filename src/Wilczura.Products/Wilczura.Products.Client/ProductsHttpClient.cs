@@ -2,7 +2,7 @@
 using Wilczura.Products.Contract;
 using Wilczura.Products.Contract.Models;
 
-namespace Wilczura.Observability.Products.Client;
+namespace Wilczura.Products.Client;
 
 public class ProductsHttpClient : IProductsHttpClient
 {

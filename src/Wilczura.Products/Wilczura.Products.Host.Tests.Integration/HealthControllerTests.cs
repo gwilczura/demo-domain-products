@@ -1,15 +1,12 @@
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-
 namespace Wilczura.Products.Host.Tests.Integration;
 
 public static class HealthControllerTests
 {
-    public class TheGetMethod : IClassFixture<WebApplicationFactory<Program>>
+    public class TheGetMethod : IClassFixture<CustomWebApplicationFactory>
     {
-        private readonly WebApplicationFactory<Program> _factory;
+        private readonly CustomWebApplicationFactory _factory;
 
-        public TheGetMethod(WebApplicationFactory<Program> factory)
+        public TheGetMethod(CustomWebApplicationFactory factory)
         {
             _factory = factory;
         }

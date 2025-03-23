@@ -3,10 +3,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Headers;
 using Wilczura.Common.Security;
-using Wilczura.Products.Client;
 using Wilczura.Products.Contract;
 
-namespace Wilczura.Observability.Products.Client;
+namespace Wilczura.Products.Client;
 
 public static class Extensions
 {

@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Host.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Application.Tests.Unit", "Wilczura.Products.Application.Tests.Unit\Wilczura.Products.Application.Tests.Unit.csproj", "{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wilczura.Products.Tests.Architecture", "Wilczura.Products.Tests.Architecture\Wilczura.Products.Tests.Architecture.csproj", "{EB4B1A6F-A10D-4B06-A0E2-54EB777D3129}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9E6CAFA-5ED4-4DF3-BF61-B59B7DBCACE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4B1A6F-A10D-4B06-A0E2-54EB777D3129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4B1A6F-A10D-4B06-A0E2-54EB777D3129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4B1A6F-A10D-4B06-A0E2-54EB777D3129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4B1A6F-A10D-4B06-A0E2-54EB777D3129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
