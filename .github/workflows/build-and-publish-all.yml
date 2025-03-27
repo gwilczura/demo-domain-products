@@ -28,7 +28,7 @@ jobs:
     needs: application-tests
     uses: gwilczura/dotnet-common/.github/workflows/build-and-test.yml@main
     with:
-      project-path: 'src/Wilczura.Products/Wilczura.Products.Tests.Architecture/Wilczura.Products.Host.Tests.Architecture.csproj'
+      project-path: 'src/Wilczura.Products/Wilczura.Products.Tests.Architecture/Wilczura.Products.Tests.Architecture.csproj'
       unique-name: architecture-tests
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
