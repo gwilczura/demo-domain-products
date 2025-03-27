@@ -32,6 +32,10 @@ public static class AssemblyHelper
 
         }
         while (stack.Count > 0);
+    }
 
+    public static IEnumerable<Assembly> GetByPrefix(IEnumerable<Assembly> assemblies, string prefix)
+    {
+        return assemblies.Where(a => (a.GetName().Name ?? string.Empty).ToLowerInvariant().StartsWith(prefix.ToLowerInvariant())).ToArray();
     }
 }
