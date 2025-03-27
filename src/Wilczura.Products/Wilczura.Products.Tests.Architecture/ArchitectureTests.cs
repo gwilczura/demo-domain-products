@@ -42,6 +42,61 @@ public static class ArchitectureTests
         }
 
         [Fact]
+        public void When_TypeIsFromContract_Then_ItShouldExist()
+        {
+            var contractNamespace = $"{_assemblyFixture.DomainNamespacePrefix}.Contract";
+            var types = Types.InAssemblies(_assemblyFixture.ContractAssemblies)
+                .That()
+                .ResideInNamespaceStartingWith(_assemblyFixture.DomainNamespacePrefix)
+                .GetTypes();
+
+            (types).ShouldNotBeEmpty("There Should be types in contract");
+        }
+
+        [Fact]
+        public void When_TypeIsFromContract_Then_ItDoesntDependOnOtherAssemblies()
+        {
+            var contractNamespace = $"{_assemblyFixture.DomainNamespacePrefix}.Contract";
+            var result = Types.InAssemblies(_assemblyFixture.ContractAssemblies)
+                .That()
+                .ResideInNamespaceStartingWith(_assemblyFixture.DomainNamespacePrefix)
+                .Should()
+                .ResideInNamespaceStartingWith(contractNamespace)
+                .GetResult();
+
+            (result.FailingTypeNames ?? []).ShouldBeEmpty("There Should be no types that contract depends on");
+        }
+
+        [Fact]
+        public void When_TypeIsFromClient_Then_ItShouldExist()
+        {
+            var contractNamespace = $"{_assemblyFixture.DomainNamespacePrefix}.Client";
+            var types = Types.InAssemblies(_assemblyFixture.ClientAssemblies)
+                .That()
+                .ResideInNamespaceStartingWith(_assemblyFixture.DomainNamespacePrefix)
+                .GetTypes();
+
+            (types).ShouldNotBeEmpty("There Should be types in client assemblies");
+        }
+
+        [Fact]
+        public void When_TypeIsFromClient_Then_ItShouldDependOnlyOnContract()
+        {
+            var clientNamespace = $"{_assemblyFixture.DomainNamespacePrefix}.Client";
+            var contractNamespace = $"{_assemblyFixture.DomainNamespacePrefix}.Contract";
+            var result = Types.InAssemblies(_assemblyFixture.ContractAssemblies)
+                .That()
+                .ResideInNamespaceStartingWith(_assemblyFixture.DomainNamespacePrefix)
+                .Should()
+                .ResideInNamespaceStartingWith(clientNamespace)
+                .Or()
+                .ResideInNamespaceStartingWith(contractNamespace)
+                .GetResult();
+
+            (result.FailingTypeNames ?? []).ShouldBeEmpty("There Should be no types other than contract that client depends on");
+        }
+
+        [Fact]
         public void When_TypeIsFromAdapter_Then_OnlyHostDependsOnIt()
         {
             var hostNamespace = $"{_assemblyFixture.DomainNamespacePrefix}.Host";
@@ -49,6 +104,7 @@ public static class ArchitectureTests
 
             var adapterAssemblies = AssemblyHelper.GetByPrefix(_assemblyFixture.HostAssemblies, adaptersNamespace);
             List<string> failures = new List<string>();
+            //check for each adapter assembly
             foreach (var adapterAssembly in adapterAssemblies)
             {
                 var assemblyName = adapterAssembly.GetName().Name!;
@@ -57,6 +113,7 @@ public static class ArchitectureTests
 
                 var typesNotFromHostAndCurrentAdapter = Types.InAssemblies(_assemblyFixture.HostAssemblies)
                 .That()
+                // fiter only "Wilczura.Products" types
                 .ResideInNamespaceStartingWith(_assemblyFixture.DomainNamespacePrefix)
                 .And()
                 // assuming namespace match assembly name
